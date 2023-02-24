@@ -5,6 +5,7 @@ public class App {
         cr.play();
         System.out.println(cr.toString());
         cr.pause();
+        cr.increaseVolume();
         System.out.println(cr.toString());
     }
 }

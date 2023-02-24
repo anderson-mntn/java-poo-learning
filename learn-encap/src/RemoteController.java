@@ -60,7 +60,7 @@ public class RemoteController implements Controller {
         System.out.print("Volume: " + this.getVolume());
 
         for (int i = 0; i < this.getVolume(); i += 10) {
-            System.out.print(" |");
+            System.out.print(" | ");
         }
 
     }
