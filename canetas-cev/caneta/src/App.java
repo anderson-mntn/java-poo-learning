@@ -25,14 +25,21 @@ public class App {
          */
 
         // Aula #05
+
         System.out.println("--- Aula #05 ---");
-        ContaBanco jubileu = new ContaBanco(445566, "jubileu");
-        System.out.println(jubileu.toString());
-        jubileu.abrirConta("cp");
-        jubileu.sacar(25);
-        // jubileu.sacar(25);
-        // jubileu.sacar(25); //Vai chegar a zero e vai impedir de sacar.
-        jubileu.pagarMensalidade(); // A mensalidade de foi de 12, se mudarmos o tipo, a mensalidade muda.
-        jubileu.pagarMensalidade();
+        BankAccount jhon = new BankAccount(445566, "jhon");
+        jhon.openAccount("accType2");
+        System.out.println(jhon.toString());
+        jhon.withdraw(25);
+        jhon.deposit(100);
+        // jhon.sacar(25);
+        // jhon.sacar(25); //Vai chegar a zero e vai impedir de sacar.
+        jhon.monthlyPayment(); // A mensalidade de foi de 12, se mudarmos o tipo, a mensalidade muda.
+        jhon.monthlyPayment();
+        jhon.closeAccount();
+        jhon.withdraw(20);
+        jhon.closeAccount();
+        jhon.withdraw(jhon.getAccBalance());
+        jhon.closeAccount();
     }
 }
