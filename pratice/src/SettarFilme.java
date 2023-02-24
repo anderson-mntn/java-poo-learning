@@ -14,7 +14,7 @@ public class SettarFilme {
         filme1.setDuracao(duracaoDoFilme);
 
         System.out.println(filme1.toString());
-
+        System.out.println("help");
         sc.close();
     }
 
