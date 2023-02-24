@@ -1,6 +1,6 @@
 package caneta.src;
 
-// CEV - Aula Teoria - #04a 
+// Aula #04 - CEV 
 
 public class Caneta {
     private String modelo;
