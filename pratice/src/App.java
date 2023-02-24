@@ -11,5 +11,6 @@ public class App {
             V++;
         }
         System.out.println(V);
+        scan.close();
     }
 }
