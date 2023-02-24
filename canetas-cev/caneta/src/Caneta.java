@@ -8,20 +8,21 @@ public class Caneta {
     private float ponta;
     private boolean tampada = true;
 
-    public void Caneta(String m, String c, float p) { // Este é um método construtor
-        this.m = m;
-        this.modelo = m;
-        this.c = c;
-        this.cor = c;
-        this.p = p;
-        this.ponta = p;
-        this.destampar();
+    // Constructor
+    public Caneta(String modelo, String cor, float ponta, boolean tampada) {
+        this.modelo = modelo;
+        this.cor = cor;
+        this.ponta = ponta;
+        this.tampada = tampada;
     }
 
-    public void destampar() {
-        this.tampada = false;
+    public Caneta(String modelo, String cor, float ponta) {
+        this.modelo = modelo;
+        this.cor = cor;
+        this.ponta = ponta;
     }
 
+    // Getters and Setters
     public String getModelo() {
         return modelo;
     }
@@ -46,15 +47,23 @@ public class Caneta {
         this.ponta = ponta;
     }
 
-    public Caneta(String modelo, String cor, float ponta) {
-        this.modelo = modelo;
-        this.cor = cor;
-        this.ponta = ponta;
+    public boolean isTampada() {
+        return tampada;
     }
 
+    public void setTampada(boolean tampada) {
+        this.tampada = tampada;
+    }
+
+    // To String
     @Override
     public String toString() {
-        return "Caneta [modelo=" + modelo + ", cor=" + cor + ", ponta=" + ponta + ", tampada: " + tampada + " ]";
+        return "Caneta [modelo=" + modelo + ", cor=" + cor + ", ponta=" + ponta + ", tampada=" + tampada + "]";
+    }
+
+    // Method destampar
+    public void destampar() {
+        this.tampada = false;
     }
 
 }
