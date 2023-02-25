@@ -4,6 +4,8 @@ import java.text.NumberFormat;
 //Exercise to learn class relationships, creating a "UFC" with fighters.
 // Tasks:
 // 1. Set fighter to a category automatically according to it's weight: Lightweight/Middleweight/Heavyweight.
+// 2. Make array of fighters (increasing it's wins, loses or draws.)
+// 3. Set a date to a fight, and checking if fight is valid (both fighters in same category)
 
 public class Fighter {
     private String name;
@@ -18,10 +20,10 @@ public class Fighter {
 
     // Methods
     public void introduceFighter(){
-        System.out.print("Fighter's Name: " + this.getName());
+        System.out.print("PRESENTING FIGHTER!!! Fighter's Name: " + this.getName());
         System.out.print(", Nacionality: " + this.getNacionality() + ", ");
         System.out.print(this.getAge()+ " Years old, ") ;
-        System.out.print("Weighing " + this.getWeight()+"kg, " + "Category: " + getCategory());
+        System.out.print("Weighting " + this.getWeight()+"kg, " + "Category: " + getCategory());
         NumberFormat formatter = new DecimalFormat("#0.00");    
         System.out.println(", and " + formatter.format(this.getHeight()) + "cm high.");
     }
@@ -76,13 +78,11 @@ public class Fighter {
     public int getWeight() {
         return weight;
     }
-    //Whenever weight changes and category also change, it will automatically change the fighter category based on new weight.
+    //Whenever weight changes and category change, it will automatically change the fighter category based on new weight.
     public void setWeight(int weight) {
         this.weight = weight;
-        if(weight < 52) setCategory("Underweight");
-        if(weight > 52 && weight <= 70) setCategory("Lightweight");
-        if(weight >= 70 && weight <= 90) setCategory("Middleweight");
-        if(weight >= 90) setCategory("Heavyweight"); 
+        setCategory();
+         
     }
     public float getHeight() {
         return height;
@@ -95,6 +95,12 @@ public class Fighter {
     }
     public void setCategory(String category) {
         this.category = category;
+    }
+    public void setCategory(){
+        if(weight < 52) setCategory("Underweight");
+        if(weight > 52 && weight <= 70) setCategory("Lightweight");
+        if(weight >= 70 && weight <= 90) setCategory("Middleweight");
+        if(weight >= 90) setCategory("Heavyweight");
     }
     public int getWins() {
         return wins;
