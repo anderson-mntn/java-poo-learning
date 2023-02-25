@@ -28,7 +28,7 @@ public class Fighter {
         System.out.println(", and " + formatter.format(this.getHeight()) + "cm high.");
     }
     public void fighterStatus(){
-
+        System.out.println(this.getName()+ " Status = Wins: " + this.wins + ", Loses: " + this.loses + ", Draws: " + this.draws);
     }
     public void winFight(){
         setWins(getWins() + 1);

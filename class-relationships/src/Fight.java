@@ -25,8 +25,9 @@ public class Fight {
     }
 
     public void fight(Fighter challenger, Fighter challenged){
-        System.out.println("The challenger " + challenger.getName() + " is fighting " + challenged.getName());
 
+        System.out.println("The challenger " + challenger.getName() + " is fighting the challenged " + challenged.getName());
+        
         if(challenger.getWeight() > challenged.getWeight()){
             challenger.winFight();
             challenged.loseFight();
