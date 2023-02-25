@@ -3,9 +3,6 @@ public class RemoteController implements Controller {
     private boolean on;
     private boolean playing;
 
-    
-   
-
     public RemoteController() {
         this.volume = 40;
         this.on = true;
