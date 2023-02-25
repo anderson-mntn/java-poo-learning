@@ -1,11 +1,4 @@
 
-// challenger;
-    // challenged;
-    // rounds;
-    // aproved;//same category
-    // setFightDate()
-    // fight()
-
 public class Fight {
     private Fighter challenger;
     private Fighter challenged;
@@ -26,7 +19,12 @@ public class Fight {
     public void fight(Fighter challenger, Fighter challenged){
 
         System.out.println("The challenger " + challenger.getName() + " is fighting the challenged " + challenged.getName());
-        
+
+        challenger.introduceFighter();
+        challenged.introduceFighter();
+        challenger.fighterStatus();
+        challenged.fighterStatus();
+
         if(challenger.getWeight() > challenged.getWeight()){
             challenger.winFight();
             challenged.loseFight();
@@ -40,8 +38,9 @@ public class Fight {
             challenger.loseFight();
             challenged.winFight();
             System.out.println(challenger.getName() + " Lost the fight! --- " + challenged.getName() + " Won the fight!" );
-
         }
+        challenger.fighterStatus();
+        challenged.fighterStatus();
     }
     
     public Fight(Fighter challenger, Fighter challenged) {
