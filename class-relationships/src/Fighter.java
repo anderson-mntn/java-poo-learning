@@ -21,9 +21,9 @@ public class Fighter {
         System.out.print("Fighter's Name: " + this.getName());
         System.out.print(", Nacionality: " + this.getNacionality() + ", ");
         System.out.print(this.getAge()+ " Years old, ") ;
-        System.out.print("Weighing " + this.getWeight()+"kg, ");
+        System.out.print("Weighing " + this.getWeight()+"kg, " + "Category: " + getCategory());
         NumberFormat formatter = new DecimalFormat("#0.00");    
-        System.out.println("and " + formatter.format(this.getHeight()) + "cm high.");
+        System.out.println(", and " + formatter.format(this.getHeight()) + "cm high.");
     }
     public void fighterStatus(){
 
@@ -51,6 +51,7 @@ public class Fighter {
         this.wins = wins;
         this.loses = loses;
         this.draws = draws;
+        setWeight(weight);
     }
 
     // Getter and Setters    
@@ -78,11 +79,10 @@ public class Fighter {
     //Whenever weight changes and category also change, it will automatically change the fighter category based on new weight.
     public void setWeight(int weight) {
         this.weight = weight;
-        if(weight < 52) this.category = "Invalid! under weight.";
-        if(weight > 52 && weight <= 70) this.category = "Lightweight";
-        if(weight >= 70 && weight <= 90) this.category = "Middleweight";
-        if(weight >= 90) this.category = "Heavyweight";    
-        
+        if(weight < 52) setCategory("Underweight");
+        if(weight > 52 && weight <= 70) setCategory("Lightweight");
+        if(weight >= 70 && weight <= 90) setCategory("Middleweight");
+        if(weight >= 90) setCategory("Heavyweight"); 
     }
     public float getHeight() {
         return height;
