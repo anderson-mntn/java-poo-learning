@@ -17,8 +17,7 @@ public class Fight {
     public void setFightDate(Fighter challenger, Fighter challenged){
         isFightApproved();
         if(isFightApproved()){
-            System.out.println("Fight was approved");
-            fight(challenger, challenged);
+            System.out.println("The fight was approved!");
         } else {
             System.out.println("Fight Declined! Both fighters must be in same category.");
         }
