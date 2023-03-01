@@ -1,7 +1,5 @@
 package classes;
 
-import classes.Person;
-
 public class Book implements Publication {
     private String title;
     private String author;

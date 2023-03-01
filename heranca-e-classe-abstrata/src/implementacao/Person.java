@@ -1,8 +1,9 @@
 package implementacao;
 
+//Criando o metodo pagar matricula para student e visitor, mas diferente para cada um deles usando sobrescrever.
 
 public abstract class Person {
-    private String name;
+    protected String name;
     private int age;
     private String gender;
 
