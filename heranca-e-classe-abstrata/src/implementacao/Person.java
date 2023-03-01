@@ -7,10 +7,7 @@ public abstract class Person {
     private int age;
     private String gender;
 
-    @Override
-    public String toString() {
-        return "Person [name=" + name + ", age=" + age + ", gender=" + gender + "]";
-    }
+   
 
     public String getName() {
         return name;
@@ -31,6 +28,9 @@ public abstract class Person {
         this.gender = gender;
     }
 
-    
+    @Override
+    public String toString() {
+        return "Person [name=" + name + ", age=" + age + ", gender=" + gender + "]";
+    }
 
 }

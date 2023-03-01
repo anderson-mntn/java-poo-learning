@@ -3,8 +3,17 @@ package implementacao;
 public class Student extends Person {
     private int enrollment;
     private String course;
+    protected int monthPayment;
 
-    public void payMonthly(){
+    public int getMonthPayment() {
+        return monthPayment;
+    }
+
+    public void setMonthPayment(int monthPayment) {
+        this.monthPayment = monthPayment;
+    }
+
+    public void payMonthly(){ // if add "final" , cannot be overrided (protect the code)
         System.out.println("Paying the monthly of the student: " + name);
     }
 
@@ -24,5 +33,9 @@ public class Student extends Person {
         this.course = course;
     }
 
-    
+    @Override
+    public String toString() {
+        return "Student=" + name + ", Enrollment=" + enrollment + ", course=" + course + ", monthPayment=" + monthPayment + "]";
+    }
+
 }
