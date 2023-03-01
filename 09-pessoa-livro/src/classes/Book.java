@@ -1,4 +1,8 @@
- class Book implements Publication {
+package classes;
+
+import classes.Person;
+
+public class Book implements Publication {
     private String title;
     private String author;
     private int totalPages;
@@ -23,6 +27,7 @@
         this.owner = owner;
         this.currentPage = 0;
     }
+
 
     public String getTitle() {
         return title;

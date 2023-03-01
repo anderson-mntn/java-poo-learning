@@ -1,3 +1,4 @@
+package classes;
 public interface Publication {
     public abstract void open ();
     public abstract void close();

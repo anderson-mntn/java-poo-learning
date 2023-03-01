@@ -1,4 +1,9 @@
+package runner;
+import classes.Book;
+import classes.Person;
+
 public class App {
+    
     public static void main(String[] args) throws Exception {
 
         Person[] p = new Person[3];
@@ -21,9 +26,6 @@ public class App {
     b[4].nextPage();
     b[4].nextPage();
     b[4].nextPage();
-
-                
-       
-
+    
     }
 }
