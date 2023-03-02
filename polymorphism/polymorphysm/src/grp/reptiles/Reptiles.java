@@ -1,4 +1,6 @@
-package grp;
+package grp.reptiles;
+
+import grp.Animal;
 
 public class Reptiles extends Animal {
     public Reptiles(float weight, int age, int members, String name) {

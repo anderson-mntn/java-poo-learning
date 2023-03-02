@@ -1,8 +1,11 @@
 package runner;
 
-import grp.BaldEagle;
-import grp.Birds;
-import grp.Fishes;
+import grp.birds.BaldEagle;
+import grp.birds.Birds;
+import grp.fishes.Fishes;
+import grp.mammals.Cat;
+import grp.mammals.Dog;
+import grp.mammals.Mammals;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -28,6 +31,14 @@ public class App {
         goldfish.move();
         goldfish.makeBubbles();
 
-        System.out.println("--- mammal --- ");
+        System.out.println("--- mammals --- ");
+
+        Mammals cow = new Mammals(200, 5, 4, "Holstein");
+        Dog dog1 = new Dog(10, 12, 4, "Marley");
+        Cat cat1 = new Cat(3,2, 4 , "Snowflake");
+
+        cow.makeNoise(); // generic from it's super class
+        dog1.makeNoise(); // polymorphism
+        cat1.makeNoise(); // polymorphism
     }
 }

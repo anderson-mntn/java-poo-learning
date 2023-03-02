@@ -1,4 +1,4 @@
-package grp;
+package grp.birds;
 
 public class BaldEagle  extends Birds{
 

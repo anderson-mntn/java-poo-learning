@@ -1,4 +1,6 @@
-package grp;
+package grp.fishes;
+
+import grp.Animal;
 
 public class Fishes extends Animal {
 

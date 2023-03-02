@@ -1,4 +1,6 @@
-package grp;
+package grp.mammals;
+
+import grp.Animal;
 
 public class Mammals extends Animal {
     public Mammals(float weight, int age, int members, String name) {
