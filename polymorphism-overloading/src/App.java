@@ -16,6 +16,10 @@ public class App {
         System.out.println("hours: 11 PM");
         dog.reaction(23);
 
+        //Check if you are Stewie's owner
+        dog.reaction(true);
+        dog.reaction(false);
+
         //Reaction according to dogs age and weight
         System.out.println("if Stewie has 2 years old and 3kg:");
         dog.reaction(2, 3.7f);

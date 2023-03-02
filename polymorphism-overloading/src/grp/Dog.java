@@ -48,9 +48,9 @@ public class Dog extends Canine {
     // If the user are his owner the dog gets one reaction
     public void reaction(boolean dogsOwner){
         if(dogsOwner){
-            System.out.println(name + " gets happy and wiggle");
+            System.out.println("You are " + name + "'s Owner, he gets happy and wiggle");
         } else {
-            System.out.println(name + " gets angry and growl");
+            System.out.println("You are not the "+ name + "'s owner, he gets angry and growl");
         }
     }
 
