@@ -1,4 +1,4 @@
-Praticing Overloading - set a method for a dog and set his reaction according with the signature. <br>
+Praticing Overloading - making his reaction according with the method signature. <br>
 Set different reactions for the dog according to:
  - A phrase you tell him. <br>
  - Hour of the day <br>
